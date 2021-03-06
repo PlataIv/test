@@ -1,7 +1,7 @@
 import axios from 'axios'
 export const getUser = () => async (dispatch) =>{
     try {
-        const data = await axios.get('http://localhost:5000/user', {withCredentials: true})
+        const data ={data:{id:"mira_ese_hardcode_papa"}}
         if(data.data){
             dispatch({ type: "FETCH_CURRENT", payload: data.data.id});
         }else{
